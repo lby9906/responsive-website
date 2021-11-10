@@ -119,6 +119,7 @@ button {
     cursor: pointer;
     border: 1px solid transparent;
     border-radius: var(--size-border-radius);
+    border: solid transparent;
 }
 
 
@@ -470,101 +471,60 @@ button {
 }
 
 .navbar__toggle-btn {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 24px;
     color: var(--color-white);
-    font-size: var(--font-medium);
-    right: 25px;
     display: none;
-}
+  }
 
 /* For below 768px screen width */
-@media screen  and (max-width: 768px){
-:root {
-    /* Font size */
-    --font-large: 30px;
-    --font-medium: 18px;
-    --font-regular: 16px;
-    --font-small: 14px;
-    --font-micro: 12px;
-}
-
-.navbar__toggle-btn {
-    display: block;
-    top: 16px;
-    right: 16px;
-    font-size: var(--font-medium);
+@media screen and (max-width: 768px) {
+    .navbar__toggle-btn {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    
     }
-
+  
     #navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: var(--color-pink);
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: var(--color-pink);
     }
-
+  
     .navbar__menu {
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        display: none;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      display: none;
     }
-
+    
     .navbar__menu.open {
         display: block;
     }
-
-    .section {
-        padding: 16px;
-        padding-top: 40px;
-    }
-
+  
     .about__majors {
-        flex-direction: column;
-        margin-top: 30px;
-        margin-bottom: 0px;
+      flex-direction: column;
     }
-
+  
     .major {
-        margin-bottom: 30px;
+      margin-bottom: 38px;
     }
-
-    .testimonial__avatar {
-        width: 120px;
-        height: 120px;
+  
+    .skillset {
+      flex-direction: column;
     }
-
-    .testimonial {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .testimonial__avatar:nth-child(even),
-    .testimonial__avatar:nth-child(odd) {
-        margin: 0;
-        margin-bottom: 8px;
-    }
-
-    .testimonial__speech-bubble {
-        order: 1;
-    }
-
-    .skill {
-        flex-direction: column;
-    }
-
-    .category__btn {
-        margin: 4px 0;
-        width: 100%;
-    }
-
+  
     .project {
-        flex-grow: 1;
+      flex-grow: 1;
     }
-
-    .arrow-up {
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-        line-height: 50px;
-        right: 16px;
-        bottom: 16px;
+  
+    .testimonial__avatar {
+      width: 80px;
+      height: 80px;
     }
-}
+  }
+  
