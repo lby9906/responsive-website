@@ -181,13 +181,12 @@ button {
 /* About */
 .about__majors {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 80px 0;
+   
 
 }
-.about__jobs {
-    margin-left: 140px;
-}
+
 
 .major__icon {
     width: 170px;
