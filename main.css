@@ -132,7 +132,7 @@ button {
 
 /* Home */
 #home {
-    background: url(./imgs/home-background.png) center/cover no-repeat;
+    background: url("./imgs/home-background.png") center/cover no-repeat;
     padding: 40px;
     padding-top: 120px;
     text-align: center;
@@ -173,14 +173,20 @@ button {
 
 .section__container {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+    
+    
 }
 
 /* About */
 .about__majors {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 80px 0;
+
+}
+.about__jobs {
+    margin-left: 140px;
 }
 
 .major__icon {
