@@ -45,6 +45,25 @@ navbarToggleBtn.addEventListener("click", () => {
 });
 
 
+// arrow-up 버튼 이동하기
+const arrowupBtn = document.querySelector(".arrow-up");
+arrowupBtn.addEventListener("click", ()=> {
+    scrollIntoView("#home");
+});
+
+
+const arrow = document.querySelector(".arrow-up"); // arrow-up 셀렉트
+document.addEventListener("scroll",()=>{ // 이벤트 발생시
+    if(window.scrollY < 1){
+        arrow.style.opacity = 0;
+    }
+    if(window.scrollY > homeHeight/2){ // 홈 높이에서 절반 사라질시
+        arrow.style.opacity = 1;
+    }
+});
+
+
+
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior : 'smooth'});
