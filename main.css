@@ -485,8 +485,7 @@ button {
     background-color: var(--color-pink);
     border-radius: 50%;
     opacity: 0;
-    transition: opacity 300ms ease-in;
-    pointer-events: none;
+    transition: opacity 300ms ease-in; 
 }
 
 .category__btn {
