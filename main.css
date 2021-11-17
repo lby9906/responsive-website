@@ -308,6 +308,7 @@ button {
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    position: relative;
 }
 
 .category__btn.selected,
@@ -341,6 +342,13 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -352,6 +360,10 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.project.invisible {
+    display: none;
 }
 
 .project__img {
@@ -473,7 +485,19 @@ button {
     background-color: var(--color-pink);
     border-radius: 50%;
     opacity: 0;
+    transition: opacity 300ms ease-in;
+    pointer-events: none;
 }
+
+.category__btn {
+    width: 100%;
+    margin: 4px 0;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
 .navbar__toggle-btn {
     position: absolute;
